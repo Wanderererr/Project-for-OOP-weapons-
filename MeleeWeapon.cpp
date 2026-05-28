@@ -4,7 +4,7 @@
 #include <algorithm>
 class MeleeWeapon : public Weapon {
 protected:
-    int durability; // Track structural integrity from 0 to 100
+    int durability; 
 
 public:
     MeleeWeapon(std::string name, int damage, double weight, int durability)
@@ -16,11 +16,6 @@ public:
     }
 };
 
-// ============================================================================
-// CONCRETE MELEE WEAPONS
-// ============================================================================
-
-// 1. SWORD
 class Sword : public MeleeWeapon {
 public:
     Sword(std::string name, int damage, double weight)
@@ -36,7 +31,6 @@ public:
     }
 };
 
-// 2. AXE
 class Axe : public MeleeWeapon {
 public:
     Axe(std::string name, int damage, double weight)
@@ -50,7 +44,6 @@ public:
     }
 };
 
-// 3. SPEAR
 class Spear : public MeleeWeapon {
 public:
     Spear(std::string name, int damage, double weight)
@@ -64,7 +57,6 @@ public:
     }
 };
 
-// 4. SABER
 class Saber : public MeleeWeapon {
 public:
     Saber(std::string name, int damage, double weight)
@@ -77,8 +69,6 @@ public:
                   << baseDamage << " slashing damage. [Durability: " << durability << "%]\n";
     }
 };
-
-// 5. BRASS KNUCKLES
 class BrassKnuckles : public MeleeWeapon {
 public:
     BrassKnuckles(std::string name, int damage, double weight)
