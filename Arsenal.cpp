@@ -4,9 +4,6 @@
 #include <memory>
 #include <iostream>
 
-// ============================================================================
-// ARSENAL MANAGER
-// ============================================================================
 class Arsenal {
 private:
     std::vector<std::unique_ptr<Weapon>> weapons;
@@ -18,7 +15,7 @@ public:
     void addWeapon(std::unique_ptr<Weapon> newWeapon) {
         std::cout << "📦 Added to arsenal: " << newWeapon->getName() << "\n";
         if (weapons.empty()) {
-            activeWeapon = newWeapon.get(); // Equip automatically if it's the first item
+            activeWeapon = newWeapon.get(); 
         }
         weapons.push_back(std::move(newWeapon));
     }
@@ -36,7 +33,7 @@ public:
 
     void fireActive() {
         if (activeWeapon) {
-            activeWeapon->attack(); // Polymorphic dispatch runtime invocation
+            activeWeapon->attack(); 
         } else {
             std::cout << "🔕 Your hands are empty!\n";
         }
