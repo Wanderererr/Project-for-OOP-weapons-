@@ -1,15 +1,11 @@
 #pragma once
 #include "Weapon.cpp"
 #include <iostream>
-
-// ============================================================================
-// RANGED WEAPON BASE CLASS
-// ============================================================================
 class RangedWeapon : public Weapon {
 protected:
     int maxAmmo;
     int currentAmmo;
-    std::string ammoName; // Generic ammunition identifier: "bullets", "arrows", etc.
+    std::string ammoName; 
 
 public:
     RangedWeapon(std::string name, int damage, double weight, int maxAmmo, std::string ammo)
@@ -21,11 +17,6 @@ public:
     }
 };
 
-// ============================================================================
-// CONCRETE RANGED WEAPONS
-// ============================================================================
-
-// 1. PISTOL
 class Pistol : public RangedWeapon {
 public:
     Pistol(std::string name, int damage, double weight, int maxAmmo)
@@ -42,7 +33,6 @@ public:
     }
 };
 
-// 2. BOW
 class Bow : public RangedWeapon {
 public:
     Bow(std::string name, int damage, double weight, int maxAmmo)
@@ -59,7 +49,6 @@ public:
     }
 };
 
-// 3. CROSSBOW
 class Crossbow : public RangedWeapon {
 public:
     Crossbow(std::string name, int damage, double weight, int maxAmmo)
