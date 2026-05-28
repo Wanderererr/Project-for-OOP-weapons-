@@ -2,10 +2,6 @@
 #include "Weapon.cpp"
 #include <iostream>
 #include <algorithm>
-
-// ============================================================================
-// MELEE WEAPON BASE CLASS
-// ============================================================================
 class MeleeWeapon : public Weapon {
 protected:
     int durability; // Track structural integrity from 0 to 100
