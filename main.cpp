@@ -8,7 +8,6 @@ int main() {
 
     std::cout << "=== INITIALIZING ARMORY CONTENT ===\n";
     
-    // Storing various weapon types into our polymorphically safe collection
     heroArsenal.addWeapon(std::make_unique<Sword>("Excalibur", 40, 2.5));
     heroArsenal.addWeapon(std::make_unique<Axe>("Executioner's Axe", 60, 5.0));
     heroArsenal.addWeapon(std::make_unique<Spear>("Spartan Spear", 35, 1.8));
@@ -34,8 +33,8 @@ int main() {
     heroArsenal.fireActive();
 
     heroArsenal.selectWeapon("Steel Crossbow");
-    heroArsenal.fireActive(); // Fires the single loaded bolt
-    heroArsenal.fireActive(); // Triggers empty weapon exception log
+    heroArsenal.fireActive(); 
+    heroArsenal.fireActive();
 
     return 0;
 }
